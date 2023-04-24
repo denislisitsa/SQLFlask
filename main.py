@@ -62,7 +62,7 @@ def populate_tracks_table():
     return "Tracks table populated successfully!"
 
 
-@app.route('/names')
+@app.route('/names/')
 def get_unique_names_count():
     conn = sql.connect('music.db')
     cursor = conn.cursor()
@@ -74,7 +74,7 @@ def get_unique_names_count():
     return jsonify({'unique_names_count': unique_names_count})
 
 
-@app.route('/tracks')
+@app.route('/tracks/')
 def get_tracks_count():
     conn = sql.connect('music.db')
     cursor = conn.cursor()
@@ -86,7 +86,7 @@ def get_tracks_count():
     return jsonify({'tracks_count': tracks_count})
 
 
-@app.route('/tracks-sec')
+@app.route('/tracks-sec/')
 def get_tracks_and_duration():
     conn = sql.connect('music.db')
     cursor = conn.cursor()
