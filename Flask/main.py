@@ -41,7 +41,7 @@ def populate_customers_table():
 
     conn.commit()
     conn.close()
-    return "Customers table populated successfully!"
+    return "COOL"
 
 
 @app.route('/tracks', methods=['POST'])
@@ -59,7 +59,7 @@ def populate_tracks_table():
 
     conn.commit()
     conn.close()
-    return "Tracks table populated successfully!"
+    return "COOL"
 
 
 @app.route('/names/')
@@ -98,3 +98,7 @@ def get_tracks_and_duration():
 
     conn.close()
     return jsonify({'tracks_info': tracks_info})
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
